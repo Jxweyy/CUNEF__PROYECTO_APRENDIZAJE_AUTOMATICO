@@ -12,15 +12,15 @@ https://www.kaggle.com/datasets/ethon0426/lending-club-20072020q1 (COLUMNAS DESC
 
 | Paso | Acción | Comando / Descripción |
 |------|---------|------------------------|
-| 1 | **Haz un fork** del repositorio | Desde GitHub, pulsa el botón **Fork** en la parte superior derecha |
-| 2 | **Clona tu fork** | `git clone https://github.com/tu-usuario/nombre-del-repo.git` |
-| 3 | **Entra al directorio** | `cd nombre-del-repo` |
-| 4 | **Agrega el remoto original** | `git remote add upstream https://github.com/autor-original/nombre-del-repo.git` |
-| 5 | **Crea una nueva rama** | `git checkout -b nombre-de-tu-rama` |
-| 6 | **Realiza tus cambios** | Edita los archivos necesarios |
-| 7 | **Agrega los cambios** | `git add .` |
-| 8 | **Confirma los cambios** | `git commit -m "Descripción breve de los cambios"` |
-| 9 | **Sube tu rama al fork** | `git push origin nombre-de-tu-rama` |
-| 10 | **Crea un Pull Request** | Desde GitHub, abre un PR hacia el repositorio original |
-| 11 | *(Opcional)* **Actualiza tu fork** | `git fetch upstream` → `git checkout main` → `git merge upstream/main` → `git push origin main` |
+| 1 | **Clona el repositorio** | `git clone https://github.com/autor/nombre-del-repo.git` |
+| 2 | **Entra al directorio del proyecto** | `cd nombre-del-repo` |
+| 3 | **Crea una nueva rama para tus cambios** | `git checkout -b nombre-de-tu-rama` |
+| 4 | **Realiza tus modificaciones** | Edita los archivos necesarios en tu entorno local |
+| 5 | **Agrega los cambios al área de preparación** | `git add .` |
+| 6 | **Confirma los cambios** | `git commit -m "Descripción breve de los cambios"` |
+| 7 | **Sube la rama al repositorio remoto** | `git push origin nombre-de-tu-rama` |
+| 8 | **Crea un Pull Request (PR)** | Desde GitHub, abre un PR desde tu rama hacia `main` |
+| 9 | *(Opcional)* **Sincroniza tu rama con `main` antes de hacer el PR** | `git fetch origin` → `git checkout nombre-de-tu-rama` → `git merge origin/main` |
+| 10 | *(Opcional)* **Elimina la rama local y remota después de fusionar** | `git branch -d nombre-de-tu-rama` → `git push origin --delete nombre-de-tu-rama` |
+
 
