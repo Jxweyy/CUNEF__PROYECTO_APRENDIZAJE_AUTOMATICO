@@ -1,11 +1,14 @@
 # CUNEF__PROYECTO_APRENDIZAJE_AUTOMATICO
 
-## Posibles datasets:
+## Participantes
+
+| **Nombre** | **Link Repositorio** |
+|------------|------------------------|
+| Joel Bello Vavro    |          https://github.com/Jxweyy              |
+|     |                        |
+|     |                        |
 
 
-https://www.kaggle.com/datasets/joebeachcapital/loan-default/data
-
-https://www.kaggle.com/datasets/ethon0426/lending-club-20072020q1 (COLUMNAS DESCRITAS DE LENDING CLUB DATASET)
 
 ## Pasos para GitHUB (BORAR)
 
@@ -49,5 +52,67 @@ El dataset utilizado recopila la información de diversos solicitantes de prést
 
 - **Ventajas del dataset**: el dataset cuenta con una gran cantidad de información (38481 filas y 37 columnas) y además que los datos parecen provenir de una fuente real, lo que nos permitirá sacar conclusiones reales que no hayan sido manipuladas.
 - **Desventajas del dataset**: contar con una gran cantidad de información también puede supone runa desventaja ya que el dataset requerirá mayor trabajo de limpieza, además, las columnas carecían de información, lo que ha requerido más tiempo de investigación para encontrarla.
+
+
+## Planteamiento del problema
+
+### Tipo de aprendizaje a usar
+
+En este proyecto, el tipo de aprendizaje que se va a utilizar es el Aprendizaje Supervisado, puesto que contamos con datos etiquetados, el cual estimaremos mediante una Regresión Logística, ya que el valor target cuenta con únicamente dos valores:
+
+- **0**: el cliente incurre en impago.
+- **1**: el cliente devuelve el préstamo en su totalidad.
+
+### Variable target
+
+La variable que se usará como target en el modelo es la columna __target__.
+Esta columna se utilizará en el EDA ya que aporta mucha información para el análisis, pero a la hora de modelizar esta se usará como variable dependiente.
+
+### Atributos
+
+#### Columnas a utilizar
+
+| **COLUMNA USADA**             | **DESCRIPCIÓN** |
+|-------------------------------|------------------|
+| importe_prestamo              | Importe solicitado por el cliente. |
+| plazo_meses                   | Plazo del préstamo. |
+| tasa_interes                  | Tipo de interés. |
+| cuota_mensual                 | Cuota mensual. |
+| antiguedad_laboral            | Años de experiencia laboral del cliente. |
+| tipo_vivienda                 | Situación de vivienda. |
+| ingreso_anual                 | Ingreso anual del cliente. |
+| estado_verificacion           | Si el ingreso fue verificado por la entidad. |
+| fecha_emision (A CONSULTAR)   | Mes de emisión del préstamo. |
+| proposito                     | Motivo para solicitar el préstamo. |
+| estado                        | Estado/Región del cliente. |
+| ratio_endeudamiento           | Ratio deuda/ingreso. |
+| moras_ultimos_2_anos          | Retrasos de pago de más de 30 días en los últimos 2 años. |
+| fecha_primera_linea_credito   | Fecha de apertura de la primera línea de crédito. |
+| consultas_6_meses             | Consultas de crédito en los últimos 6 meses. |
+| meses_desde_ultima_mora       | Meses desde la última mora. |
+| cuentas_abiertas              | Número de cuentas de crédito abiertas. |
+| registros_publicos            | Registros públicos negativos. |
+| saldo_rotativo                | Saldo total de crédito rotativo. |
+| utilizacion_rotativo          | Porcentaje de utilización del crédito rotativo. |
+| total_cuentas                 | Número total de cuentas de crédito en el historial del cliente. |
+
+#### Columnas a excluir
+
+| **COLUMNA EXCLUIDA**          | **MOTIVO DE EXCLUSIÓN** |
+|-------------------------------|---------------------------|
+| id_cliente                    | No aporta ningún valor al modelo ya que es un identificador. |
+| importe_financiado            | Se decide por el banco, tras evaluar el riesgo. (Data Leakage) |
+| importe_inversores            | Se decide por los inversores, tras evaluar el riesgo. (Data Leakage) |
+| estado_prestamo               | Ofrece información tras finalizar el préstamo. (Data Leakage) |
+| total_pagado                  | Dato solo conocido al finalizar el préstamo. (Data Leakage) |
+| total_pagado_inversor         | Dato solo conocido al finalizar el préstamo. (Data Leakage) |
+| principal_recuperado          | Dato solo conocido al finalizar el préstamo. (Data Leakage) |
+| intereses_recuperados         | Intereses devueltos tras iniciar el préstamo. (Data Leakage) |
+| fecha_ultimo_pago             | Dato conocido al conceder el préstamo. (Data Leakage) |
+| monto_ultimo_pago             | Dato conocido al conceder el préstamo. (Data Leakage) |
+| fecha_proximo_pago            | Dato conocido al conceder el préstamo. (Data Leakage) |
+| fecha_revision_credito        | Revisión hecha después del préstamo. (Data Leakage) |
+| impago (target)               | Variable objetivo a predecir, no se usa como feature. (Si que se usa en EDA) |
+
 
 
