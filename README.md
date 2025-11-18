@@ -50,6 +50,8 @@ El dataset utilizado para este proyecto procede de la plataforma [Kaggle](kaggle
 
 El dataset utilizado recopila la información de diversos solicitantes de préstamos, con variables geográficas, demográficas y de comportamiento.
 
+*El dataset incluye como una de sus columnas las siglas de cada estado de Estados Unidos. Para asociar cada abreviación a su estado hemos usado [este dataset](https://www.kaggle.com/datasets/agilesifaka/us2letterstatecodecsv)
+
 - **Ventajas del dataset**: el dataset cuenta con una gran cantidad de información (38481 filas y 37 columnas) y además que los datos parecen provenir de una fuente real, lo que nos permitirá sacar conclusiones reales que no hayan sido manipuladas.
 - **Desventajas del dataset**: contar con una gran cantidad de información también puede supone runa desventaja ya que el dataset requerirá mayor trabajo de limpieza, además, las columnas carecían de información, lo que ha requerido más tiempo de investigación para encontrarla.
 
@@ -65,7 +67,7 @@ En este proyecto, el tipo de aprendizaje que se va a utilizar es el Aprendizaje 
 
 ### Variable target
 
-La variable que se usará como target en el modelo es la columna __target__.
+La variable que se usará como target en el modelo es la columna __impago__.
 Esta columna se utilizará en el EDA ya que aporta mucha información para el análisis, pero a la hora de modelizar esta se usará como variable dependiente.
 
 ### Atributos
@@ -77,7 +79,6 @@ Esta columna se utilizará en el EDA ya que aporta mucha información para el an
 | importe_prestamo              | Importe solicitado por el cliente. |
 | plazo_meses                   | Plazo del préstamo. |
 | tasa_interes                  | Tipo de interés. |
-| cuota_mensual                 | Cuota mensual. |
 | antiguedad_laboral            | Años de experiencia laboral del cliente. |
 | tipo_vivienda                 | Situación de vivienda. |
 | ingreso_anual                 | Ingreso anual del cliente. |
@@ -113,6 +114,7 @@ Esta columna se utilizará en el EDA ya que aporta mucha información para el an
 | fecha_proximo_pago            | Dato conocido al conceder el préstamo. (Data Leakage) |
 | fecha_revision_credito        | Revisión hecha después del préstamo. (Data Leakage) |
 | impago (target)               | Variable objetivo a predecir, no se usa como feature. (Si que se usa en EDA) |
+| cuota_mensual                 | Es la combinación de importe_prestamo, plazo_meses y tasa_interes. |
 
 
 
