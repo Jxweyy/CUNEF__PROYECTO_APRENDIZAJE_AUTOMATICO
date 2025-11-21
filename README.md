@@ -1,29 +1,16 @@
 # CUNEF__PROYECTO_APRENDIZAJE_AUTOMATICO
 
+## Link repositorio
+https://github.com/Jxweyy/CUNEF__PROYECTO_APRENDIZAJE_AUTOMATICO
+
+
 ## Participantes
 
-| **Nombre** | **Link Repositorio** |
+| **Nombre** | **Link Repositorio** | **Correo** |
 |------------|------------------------|
-| Joel Bello Vavro    |          https://github.com/Jxweyy              |
-|   Antonio Cabadas Antón  |    https://github.com/AntonioKbb                   |
-|   Guillermo Martínez Sánchez  |           https://github.com/guillermoms2002             |
-
-
-
-## Pasos para GitHUB (BORAR)
-
-| Paso | Acción | Comando / Descripción |
-|------|---------|------------------------|
-| 1 | **Clona el repositorio** | `git clone https://github.com/autor/nombre-del-repo.git` |
-| 2 | **Entra al directorio del proyecto** | `cd nombre-del-repo` |
-| 3 | **Crea una nueva rama para tus cambios** | `git checkout -b nombre-de-tu-rama` |
-| 4 | **Realiza tus modificaciones** | Edita los archivos necesarios en tu entorno local |
-| 5 | **Agrega los cambios al área de preparación** | `git add .` |
-| 6 | **Confirma los cambios** | `git commit -m "Descripción breve de los cambios"` |
-| 7 | **Sube la rama al repositorio remoto** | `git push origin nombre-de-tu-rama` |
-| 8 | **Crea un Pull Request (PR)** | Desde GitHub, abre un PR desde tu rama hacia `main` |
-| 9 | *(Opcional)* **Sincroniza tu rama con `main` antes de hacer el PR** | `git fetch origin` → `git checkout nombre-de-tu-rama` → `git merge origin/main` |
-| 10 | *(Opcional)* **Elimina la rama local y remota después de fusionar** | `git branch -d nombre-de-tu-rama` → `git push origin --delete nombre-de-tu-rama` |
+| Joel Bello Vavro    |          https://github.com/Jxweyy              | joel.bello@cunef.edu |
+|   Antonio Cabadas Antón  |    https://github.com/AntonioKbb                   | antonio.cabadas@cunef.edu |
+|   Guillermo Martínez Sánchez  |           https://github.com/guillermoms2002     | g.martinezsanchez@cunef.edu |
 
 
 ## Descripción del problema de negocio
@@ -43,7 +30,7 @@ Dataset utilizado: [Loan Defaults](https://www.kaggle.com/datasets/joebeachcapit
 
 Dataset información columnas: [Lending Club 2007-2020Q3](https://www.kaggle.com/datasets/ethon0426/lending-club-20072020q1) (De este dataset es de donde hemos recopilado la información de las columnas ya que es de este de donde proviene la información del nuestro.)
 
-El dataset utilizado para este proyecto procede de la plataforma [Kaggle](kaggle.com), plataforma educativa donde se pueden encontrar cientos de datasets (tanto reales como sintéticos) para poder practicar.
+El dataset utilizado para este proyecto procede de la plataforma [Kaggle](https://www.kaggle.com/), plataforma educativa donde se pueden encontrar cientos de datasets (tanto reales como sintéticos) para poder practicar.
 
 - **Ventajas de Kaggle**: gran catálogo de datasets de diversos temas, notebooks de otros participantes, competiciones y página de uso gratis.
 - **Desventajas de Kaggle**: difcultad de ver si un dataset es real (en caso de que se necesiten datos reales) y gran cantidad de datasets con datos de calidad pésima de los datos y falta de información (columnas, proveniencia...).
@@ -65,9 +52,10 @@ En este proyecto, el tipo de aprendizaje que se va a utilizar es el Aprendizaje 
 - **0**: el cliente incurre en impago.
 - **1**: el cliente devuelve el préstamo en su totalidad.
 
-Los modelos de clasificación supervisada que planteamos usar son:
+Los modelos de clasificación supervisada que planteamos usar son, ya que queremos modelar una variable binaria son:
 - **Regresión Logística**
-- **Árboles de decisión**
+- **Árboles de decisión** 
+
 (Estos son los modelos que hemos visto hasta el momento, en caso de estudiar un nuevo modelo en clase que veamos que se ajusta a nuestro problema, lo agregaremos)
 
 ### Variable target
