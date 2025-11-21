@@ -49,8 +49,8 @@ El dataset utilizado recopila la información de diversos solicitantes de prést
 
 En este proyecto, el tipo de aprendizaje que se va a utilizar es el Aprendizaje Supervisado, puesto que contamos con datos etiquetados, con un valor target que toma los valores:
 
-- **0**: el cliente incurre en impago.
-- **1**: el cliente devuelve el préstamo en su totalidad.
+- **0**: el cliente devuelve el préstamo en su totalidad.
+- **1**: el cliente incurre en impago.
 
 Los modelos de clasificación supervisada que planteamos usar son, ya que queremos modelar una variable binaria son:
 - **Regresión Logística**
