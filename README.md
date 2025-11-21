@@ -6,7 +6,7 @@
 |------------|------------------------|
 | Joel Bello Vavro    |          https://github.com/Jxweyy              |
 |   Antonio Cabadas Antón  |    https://github.com/AntonioKbb                   |
-|     |                        |
+|   Guillermo Martínez Sánchez  |           https://github.com/guillermoms2002             |
 
 
 
@@ -60,10 +60,15 @@ El dataset utilizado recopila la información de diversos solicitantes de prést
 
 ### Tipo de aprendizaje a usar
 
-En este proyecto, el tipo de aprendizaje que se va a utilizar es el Aprendizaje Supervisado, puesto que contamos con datos etiquetados, el cual estimaremos mediante una Regresión Logística, ya que el valor target cuenta con únicamente dos valores:
+En este proyecto, el tipo de aprendizaje que se va a utilizar es el Aprendizaje Supervisado, puesto que contamos con datos etiquetados, con un valor target que toma los valores:
 
 - **0**: el cliente incurre en impago.
 - **1**: el cliente devuelve el préstamo en su totalidad.
+
+Los modelos de clasificación supervisada que planteamos usar son:
+- **Regresión Logística**
+- **Árboles de decisión**
+(Estos son los modelos que hemos visto hasta el momento, en caso de estudiar un nuevo modelo en clase que veamos que se ajusta a nuestro problema, lo agregaremos)
 
 ### Variable target
 
@@ -83,12 +88,10 @@ Esta columna se utilizará en el EDA ya que aporta mucha información para el an
 | tipo_vivienda                 | Situación de vivienda. |
 | ingreso_anual                 | Ingreso anual del cliente. |
 | estado_verificacion           | Si el ingreso fue verificado por la entidad. |
-| fecha_emision (A CONSULTAR)   | Mes de emisión del préstamo. |
 | proposito                     | Motivo para solicitar el préstamo. |
 | estado                        | Estado/Región del cliente. |
 | ratio_endeudamiento           | Ratio deuda/ingreso. |
 | moras_ultimos_2_anos          | Retrasos de pago de más de 30 días en los últimos 2 años. |
-| fecha_primera_linea_credito   | Fecha de apertura de la primera línea de crédito. |
 | consultas_6_meses             | Consultas de crédito en los últimos 6 meses. |
 | meses_desde_ultima_mora       | Meses desde la última mora. |
 | cuentas_abiertas              | Número de cuentas de crédito abiertas. |
@@ -101,6 +104,7 @@ Esta columna se utilizará en el EDA ya que aporta mucha información para el an
 
 | **COLUMNA EXCLUIDA**          | **MOTIVO DE EXCLUSIÓN** |
 |-------------------------------|---------------------------|
+| id                            | Identificador de la fila, no aporta información. |
 | id_cliente                    | No aporta ningún valor al modelo ya que es un identificador. |
 | importe_financiado            | Se decide por el banco, tras evaluar el riesgo. (Data Leakage) |
 | importe_inversores            | Se decide por los inversores, tras evaluar el riesgo. (Data Leakage) |
@@ -113,8 +117,11 @@ Esta columna se utilizará en el EDA ya que aporta mucha información para el an
 | monto_ultimo_pago             | Dato conocido al conceder el préstamo. (Data Leakage) |
 | fecha_proximo_pago            | Dato conocido al conceder el préstamo. (Data Leakage) |
 | fecha_revision_credito        | Revisión hecha después del préstamo. (Data Leakage) |
-| impago (target)               | Variable objetivo a predecir, no se usa como feature. (Si que se usa en EDA) |
+| impago (target)               | Variable objetivo a predecir, no se usa como feature. |
 | cuota_mensual                 | Es la combinación de importe_prestamo, plazo_meses y tasa_interes. |
+| fecha_emision                 | Dato posterior al conceder el préstamo (Data Leakage)  |
+| fecha_primera_linea_credito   | Consideramos que las fechas no van a ser de utilidad para nuestros modelos. |
+| codigo_postal                 | El código postal no aporta información útil para el modelo (Está anonimizado). |
 
 
 
