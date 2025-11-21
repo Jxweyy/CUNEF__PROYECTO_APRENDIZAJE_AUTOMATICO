@@ -7,10 +7,10 @@ https://github.com/Jxweyy/CUNEF__PROYECTO_APRENDIZAJE_AUTOMATICO
 ## Participantes
 
 | **Nombre** | **Link Repositorio** | **Correo** |
-|------------|------------------------|
-| Joel Bello Vavro    |          https://github.com/Jxweyy              | joel.bello@cunef.edu |
-|   Antonio Cabadas Antón  |    https://github.com/AntonioKbb                   | antonio.cabadas@cunef.edu |
-|   Guillermo Martínez Sánchez  |           https://github.com/guillermoms2002     | g.martinezsanchez@cunef.edu |
+|------------|-----------------------|-------------|
+| Joel Bello Vavro | https://github.com/Jxweyy | joel.bello@cunef.edu |
+| Antonio Cabadas Antón | https://github.com/AntonioKbb | antonio.cabadas@cunef.edu |
+| Guillermo Martínez Sánchez | https://github.com/guillermoms2002 | g.martinezsanchez@cunef.edu |
 
 
 ## Descripción del problema de negocio
